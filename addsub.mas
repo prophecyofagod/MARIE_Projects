@@ -1,0 +1,32 @@
+﻿INPUT
+STORE	x
+INPUT 
+STORE	y
+INPUT 
+STORE	z
+
+	LOAD	x
+	ADD		y
+    ADD		z
+    STORE sum
+    LOAD sum
+    OUTPUT
+    CLEAR
+    
+    
+   	LOAD	x
+	SUBT	y
+    SUBT	z
+    STORE sub
+    LOAD sub
+    OUTPUT
+    CLEAR
+    HALT
+    
+       
+x,	DEC		0
+y,	DEC		0
+z,	DEC		0
+sum, DEC	0
+sub, DEC	0
+    

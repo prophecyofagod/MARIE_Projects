@@ -1,0 +1,23 @@
+﻿INPUT
+STORE	x
+INPUT 
+STORE	y
+
+IF,	LOAD	x
+	SUBT	y
+    SKIPCOND	000 /x<y
+    JUMP	ELSE
+    
+THEN, LOAD	x
+      OUTPUT
+      JUMP Endif
+    
+ELSE, LOAD y
+	  OUTPUT
+      HALT
+      
+Endif, HALT
+       
+x,	DEC		0
+y,	DEC		0
+    

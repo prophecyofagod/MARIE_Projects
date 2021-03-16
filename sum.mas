@@ -1,0 +1,40 @@
+﻿INPUT			/ INPUT into AC
+STORE		MAX	/ STORE AC into MAX
+
+Cond,	LOAD		COUNT / LOAD count into AC
+        SUBT		MAX	/ SUBT MAX from AC
+        SKIPCOND	000	/ Skipcond 000 if AC < 0
+        JUMP		End	/ JUMP to End
+
+Loop,	LOAD		COUNT	/ LOAD Count into AC
+        ADD			ONE	/ ADD ONE to AC
+        STORE		COUNT	/ STORE AC into COUNT
+        LOAD 		COUNT	/ LOAD count into AC
+        OUTPUT			/ OUTPUT AC
+        LOAD		SUM
+        ADD			COUNT
+        STORE		SUM
+        JUMP		Cond / JUMP to Cond
+
+End,	LOAD		SUM
+		OUTPUT		
+		HALT			/ HALT process
+		
+
+/ variables
+COUNT,	DEC		0
+MAX,	DEC		0
+SUM,	DEC		0
+
+/ constants
+ZERO,	DEC		0
+ONE,	DEC		1
+TWO,	DEC		2
+THREE,	DEC		3
+FOUR,	DEC		4
+FIVE,	DEC		5
+SIX,	DEC		6
+SEVEN,	DEC		7
+EIGHT,	DEC		8
+NINE,	DEC		9
+TEN,	DEC		10
